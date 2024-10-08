@@ -16,10 +16,16 @@ class Ball:
         self.dy = randint(5, 10)
 
     def update(self):
-        if (self.typeofball == 0 and self.y > 55):
-            self.y -= self.dy
-        elif(self.typeofball != 0 and self.y > 60):
-            self.y -= self.dy
+        if (self.typeofball == 0 ):
+            if self.y > 65:
+                self.y -= self.dy
+            else:
+                self.y=55
+        elif(self.typeofball != 0):
+            if self.y > 70:
+                self.y -= self.dy
+            else:
+                self.y=65
     def draw(self):
         self.image.draw(self.x, self.y)
 
